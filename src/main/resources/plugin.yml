@@ -1,0 +1,6 @@
+main: net.xyfe.twinelib.TwineLib
+name: TwineLib
+author: jf908
+version: ${project.fullVersion}
+version: 0.1
+api-version: 1.15
