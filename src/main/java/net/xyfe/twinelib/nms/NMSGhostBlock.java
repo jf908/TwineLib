@@ -29,12 +29,12 @@ public class NMSGhostBlock extends EntityFallingBlock {
     if(target != null) {
       setMot(target.getX() - locX(), target.getY() - locY(), target.getZ() - locZ());
       velocityChanged = true;
-
-      lastX = locX();
-      lastY = locY();
-      lastZ = locZ();
-      move(EnumMoveType.SELF, getMot());
     }
+
+    lastX = locX();
+    lastY = locY();
+    lastZ = locZ();
+    move(EnumMoveType.SELF, getMot());
   }
 
   @Override
