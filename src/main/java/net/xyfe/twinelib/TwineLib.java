@@ -2,14 +2,14 @@ package net.xyfe.twinelib;
 
 import org.bukkit.Location;
 import org.bukkit.block.data.BlockData;
-import org.bukkit.craftbukkit.v1_15_R1.CraftWorld;
-import org.bukkit.craftbukkit.v1_15_R1.block.data.CraftBlockData;
+import org.bukkit.craftbukkit.v1_16_R2.CraftWorld;
+import org.bukkit.craftbukkit.v1_16_R2.block.data.CraftBlockData;
 import org.bukkit.entity.Minecart;
 import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.minecraft.server.v1_15_R1.Entity;
-import net.minecraft.server.v1_15_R1.World;
+import net.minecraft.server.v1_16_R2.Entity;
+import net.minecraft.server.v1_16_R2.World;
 import net.xyfe.twinelib.nms.NMSAutoturnGhostMinecart;
 import net.xyfe.twinelib.nms.NMSGhostBlock;
 import net.xyfe.twinelib.nms.NMSGhostMinecart;

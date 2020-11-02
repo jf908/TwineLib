@@ -1,8 +1,8 @@
 package net.xyfe.twinelib.nms;
 
-import net.minecraft.server.v1_15_R1.EnumMoveType;
-import net.minecraft.server.v1_15_R1.Vec3D;
-import net.minecraft.server.v1_15_R1.World;
+import net.minecraft.server.v1_16_R2.EnumMoveType;
+import net.minecraft.server.v1_16_R2.Vec3D;
+import net.minecraft.server.v1_16_R2.World;
 
 public class NMSAutoturnGhostMinecart extends NMSGhostMinecart {
   public NMSAutoturnGhostMinecart(World world, double d0, double d1, double d2) {

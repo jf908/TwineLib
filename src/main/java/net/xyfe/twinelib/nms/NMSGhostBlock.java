@@ -1,12 +1,12 @@
 package net.xyfe.twinelib.nms;
 
-import org.bukkit.craftbukkit.v1_15_R1.entity.CraftEntity;
+import org.bukkit.craftbukkit.v1_16_R2.entity.CraftEntity;
 import org.bukkit.util.Vector;
 
-import net.minecraft.server.v1_15_R1.EntityFallingBlock;
-import net.minecraft.server.v1_15_R1.EnumMoveType;
-import net.minecraft.server.v1_15_R1.IBlockData;
-import net.minecraft.server.v1_15_R1.World;
+import net.minecraft.server.v1_16_R2.EntityFallingBlock;
+import net.minecraft.server.v1_16_R2.EnumMoveType;
+import net.minecraft.server.v1_16_R2.IBlockData;
+import net.minecraft.server.v1_16_R2.World;
 import net.xyfe.twinelib.craft.CraftGhostBlock;
 
 public class NMSGhostBlock extends EntityFallingBlock {

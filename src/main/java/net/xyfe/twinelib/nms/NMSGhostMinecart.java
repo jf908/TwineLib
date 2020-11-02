@@ -1,8 +1,8 @@
 package net.xyfe.twinelib.nms;
 
-import net.minecraft.server.v1_15_R1.EntityMinecartRideable;
-import net.minecraft.server.v1_15_R1.EnumMoveType;
-import net.minecraft.server.v1_15_R1.World;
+import net.minecraft.server.v1_16_R2.EntityMinecartRideable;
+import net.minecraft.server.v1_16_R2.EnumMoveType;
+import net.minecraft.server.v1_16_R2.World;
 
 public class NMSGhostMinecart extends EntityMinecartRideable {
   public NMSGhostMinecart(World world, double d0, double d1, double d2) {
