@@ -1,12 +1,12 @@
 package net.xyfe.twinelib.nms;
 
-import org.bukkit.craftbukkit.v1_16_R2.entity.CraftEntity;
+import org.bukkit.craftbukkit.v1_16_R3.entity.CraftEntity;
 import org.bukkit.util.Vector;
 
-import net.minecraft.server.v1_16_R2.EntityFallingBlock;
-import net.minecraft.server.v1_16_R2.EnumMoveType;
-import net.minecraft.server.v1_16_R2.IBlockData;
-import net.minecraft.server.v1_16_R2.World;
+import net.minecraft.server.v1_16_R3.EntityFallingBlock;
+import net.minecraft.server.v1_16_R3.EnumMoveType;
+import net.minecraft.server.v1_16_R3.IBlockData;
+import net.minecraft.server.v1_16_R3.World;
 import net.xyfe.twinelib.craft.CraftGhostBlock;
 
 public class NMSGhostBlock extends EntityFallingBlock {
@@ -26,7 +26,7 @@ public class NMSGhostBlock extends EntityFallingBlock {
 
   @Override
   public void tick() {
-    if(target != null) {
+    if (target != null) {
       setMot(target.getX() - locX(), target.getY() - locY(), target.getZ() - locZ());
       velocityChanged = true;
     }

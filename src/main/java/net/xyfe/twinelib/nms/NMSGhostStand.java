@@ -1,8 +1,8 @@
 package net.xyfe.twinelib.nms;
 
-import net.minecraft.server.v1_16_R2.EntityArmorStand;
-import net.minecraft.server.v1_16_R2.EnumMoveType;
-import net.minecraft.server.v1_16_R2.World;
+import net.minecraft.server.v1_16_R3.EntityArmorStand;
+import net.minecraft.server.v1_16_R3.EnumMoveType;
+import net.minecraft.server.v1_16_R3.World;
 
 /**
  * NMSGhostStand
