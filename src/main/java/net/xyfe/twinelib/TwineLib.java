@@ -22,10 +22,11 @@ import net.minecraft.server.v1_16_R3.EntityTypes;
 import net.minecraft.server.v1_16_R3.MinecraftKey;
 import net.minecraft.server.v1_16_R3.World;
 import net.xyfe.twinelib.nms.NMSAutoturnGhostMinecart;
-import net.xyfe.twinelib.nms.NMSDefinedStructure;
 import net.xyfe.twinelib.nms.NMSGhostBlock;
 import net.xyfe.twinelib.nms.NMSGhostMinecart;
 import net.xyfe.twinelib.nms.NMSGhostSheep;
+import net.xyfe.twinelib.structure.NMSDefinedStructure;
+import net.xyfe.twinelib.structure.Structure;
 
 public class TwineLib extends JavaPlugin {
   public static void playBreakAnimation(Player player, EquipmentSlot slot) {

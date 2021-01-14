@@ -1,4 +1,4 @@
-package net.xyfe.twinelib;
+package net.xyfe.twinelib.structure;
 
 import org.bukkit.block.data.BlockData;
 

@@ -1,4 +1,4 @@
-package net.xyfe.twinelib;
+package net.xyfe.twinelib.structure;
 
 import java.util.List;
 
@@ -10,4 +10,6 @@ public interface Structure {
   int getSizeZ();
 
   List<StructureBlockInfo> getBlockInfo();
+
+  List<StructureBlockInfo> getBlockInfo(StructurePlacementData data);
 }

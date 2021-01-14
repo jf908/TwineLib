@@ -4,7 +4,7 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.craftbukkit.v1_16_R3.block.data.CraftBlockData;
 
 import net.minecraft.server.v1_16_R3.DefinedStructure;
-import net.xyfe.twinelib.StructureBlockInfo;
+import net.xyfe.twinelib.structure.StructureBlockInfo;
 
 public class NMSDefinedStructureBlockInfo implements StructureBlockInfo {
   DefinedStructure.BlockInfo info;
