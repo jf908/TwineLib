@@ -1,24 +1,24 @@
 package net.xyfe.twinelib.nms;
 
-import net.minecraft.server.v1_16_R3.EntityMinecartRideable;
-import net.minecraft.server.v1_16_R3.EnumMoveType;
-import net.minecraft.server.v1_16_R3.World;
+import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.vehicle.Minecart;
+import net.minecraft.world.level.Level;
 
-public class NMSGhostMinecart extends EntityMinecartRideable {
-  public NMSGhostMinecart(World world, double d0, double d1, double d2) {
+public class NMSGhostMinecart extends Minecart {
+  public NMSGhostMinecart(Level world, double d0, double d1, double d2) {
     super(world, d0, d1, d2);
-    this.noclip = true;
+    this.noPhysics = true;
     this.setNoGravity(true);
   }
 
   @Override
   public void tick() {
-    lastX = locX();
-    lastY = locY();
-    lastZ = locZ();
-    lastYaw = yaw;
-    lastPitch = pitch;
+    xo = getX();
+    yo = getY();
+    zo = getZ();
+    yRotO = getYRot();
+    xRotO = getXRot();
 
-    move(EnumMoveType.SELF, getMot());
+    move(MoverType.SELF, getDeltaMovement());
   }
 }

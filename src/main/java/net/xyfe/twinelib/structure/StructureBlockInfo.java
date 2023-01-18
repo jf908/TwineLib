@@ -10,5 +10,4 @@ public interface StructureBlockInfo {
   int getZ();
 
   BlockData getBlockState();
-
 }

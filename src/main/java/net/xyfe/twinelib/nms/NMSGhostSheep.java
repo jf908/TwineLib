@@ -1,12 +1,12 @@
 package net.xyfe.twinelib.nms;
 
-import net.minecraft.server.v1_16_R3.EntitySheep;
-import net.minecraft.server.v1_16_R3.EntityTypes;
-import net.minecraft.server.v1_16_R3.World;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.level.Level;
 
-public class NMSGhostSheep extends EntitySheep {
-  public NMSGhostSheep(EntityTypes<? extends EntitySheep> entitytypes, World world) {
+public class NMSGhostSheep extends Sheep {
+  public NMSGhostSheep(EntityType<? extends Sheep> entitytypes, Level world) {
     super(entitytypes, world);
-    this.noclip = true;
+    this.noPhysics = true;
   }
 }

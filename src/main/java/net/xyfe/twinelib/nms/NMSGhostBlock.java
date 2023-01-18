@@ -1,22 +1,30 @@
 package net.xyfe.twinelib.nms;
 
-import org.bukkit.craftbukkit.v1_16_R3.entity.CraftEntity;
+import org.apache.commons.lang3.reflect.FieldUtils;
+import org.bukkit.craftbukkit.v1_19_R2.entity.CraftEntity;
 import org.bukkit.util.Vector;
 
-import net.minecraft.server.v1_16_R3.EntityFallingBlock;
-import net.minecraft.server.v1_16_R3.EnumMoveType;
-import net.minecraft.server.v1_16_R3.IBlockData;
-import net.minecraft.server.v1_16_R3.World;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.item.FallingBlockEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.xyfe.twinelib.craft.CraftGhostBlock;
 
-public class NMSGhostBlock extends EntityFallingBlock {
-
+public class NMSGhostBlock extends FallingBlockEntity {
   private Vector target;
-  // private Function<Integer,Vector> targetGenerator;
 
-  public NMSGhostBlock(World world, double d0, double d1, double d2, IBlockData iblockdata) {
-    super(world, d0, d1, d2, iblockdata);
-    this.noclip = true;
+  public NMSGhostBlock(Level world, double d0, double d1, double d2, BlockState blockState) {
+    super(EntityType.FALLING_BLOCK, world);
+
+    setPos(d0, d1, d2);
+    try {
+      FieldUtils.writeField(this, "ao", blockState, true);
+    } catch (IllegalAccessException ex) {
+      throw new RuntimeException("Couldn't set blockState of falling block");
+    }
+
+    this.noPhysics = true;
     this.setNoGravity(true);
   }
 
@@ -27,18 +35,18 @@ public class NMSGhostBlock extends EntityFallingBlock {
   @Override
   public void tick() {
     if (target != null) {
-      setMot(target.getX() - locX(), target.getY() - locY(), target.getZ() - locZ());
-      velocityChanged = true;
+      setDeltaMovement(target.getX() - getX(), target.getY() - getY(), target.getZ() - getZ());
+      hurtMarked = true;
     }
 
-    lastX = locX();
-    lastY = locY();
-    lastZ = locZ();
-    move(EnumMoveType.SELF, getMot());
+    xo = getX();
+    yo = getY();
+    zo = getZ();
+    move(MoverType.SELF, getDeltaMovement());
   }
 
   @Override
   public CraftEntity getBukkitEntity() {
-    return new CraftGhostBlock(world.getServer(), this);
+    return new CraftGhostBlock(level.getCraftServer(), this);
   }
 }

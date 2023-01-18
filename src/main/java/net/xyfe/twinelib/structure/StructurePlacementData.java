@@ -3,18 +3,17 @@ package net.xyfe.twinelib.structure;
 import org.bukkit.block.structure.Mirror;
 import org.bukkit.block.structure.StructureRotation;
 
-import net.minecraft.server.v1_16_R3.DefinedStructureInfo;
-import net.minecraft.server.v1_16_R3.EnumBlockMirror;
-import net.minecraft.server.v1_16_R3.EnumBlockRotation;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 
 public class StructurePlacementData {
-  protected DefinedStructureInfo data = new DefinedStructureInfo();
+  protected StructurePlaceSettings data = new StructurePlaceSettings();
 
   public void setMirror(Mirror mirror) {
-    data.a(EnumBlockMirror.valueOf(mirror.name()));
+    data.setMirror(net.minecraft.world.level.block.Mirror.valueOf(mirror.name()));
   }
 
   public void setBlockRotation(StructureRotation rotation) {
-    data.a(EnumBlockRotation.valueOf(rotation.name()));
+    data.setRotation(Rotation.valueOf(rotation.name()));
   }
 }
